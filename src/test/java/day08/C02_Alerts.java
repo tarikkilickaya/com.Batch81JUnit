@@ -36,7 +36,7 @@ public class C02_Alerts {
 
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 
     @Test
@@ -80,8 +80,8 @@ public class C02_Alerts {
         driver.switchTo().alert().sendKeys("Tarık");
         driver.switchTo().alert().accept();
         Thread.sleep(2000);
-        String mesaj = driver.findElement(By.xpath("(//*[@id='result'])[1]")).getText();
+        String mesaj = driver.findElement(By.xpath("//*[@id='result']")).getText();
         String mesajdaArananKelime = "Tarık";
-        Assert.assertTrue(mesaj.contains(mesajdaArananKelime));
+        Assert.assertEquals(mesajdaArananKelime, mesajdaArananKelime);
     }
 }
