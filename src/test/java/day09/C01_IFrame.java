@@ -26,7 +26,7 @@ public class C01_IFrame {
 
     @After
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
     @Test

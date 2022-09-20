@@ -36,7 +36,7 @@ public class C02_Alerts {
 
     @After
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
     @Test

@@ -7,14 +7,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class C04_WindowHandles {
+public class C04_WindowHandle {
 
     WebDriver driver;
 
@@ -28,13 +27,12 @@ public class C04_WindowHandles {
 
     @After
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
     @Test
     public void test1() {
-        https:
-//the-internet.herokuapp.com/windows adresine gidin.
+        // https:the-internet.herokuapp.com/windows adresine gidin.
         driver.get("https://the-internet.herokuapp.com/windows");
         String windowHandle = driver.getWindowHandle();
         //Sayfadaki textin “Opening a new window” olduğunu doğrulayın.
@@ -42,6 +40,15 @@ public class C04_WindowHandles {
         // Sayfa başlığının(title) “The Internet” olduğunu doğrulayın.
         Assert.assertTrue(driver.getTitle().equals("The Internet"));
         // Click Here butonuna basın.
+
+        /*
+        Bir web sitesine gittigimizde bir web elementi tikladigimizda yeni bir sekme ya da pencere acilirsa
+        buyeni acilan sekmenin handle degerini bulabilmek icin driver.getWindowHandles() methodunu bir ArrayList'e
+        atip butun sayfalarin listesine ulasabiliriz. Ilk actigim pencerenin index'i 0'dır,ikinci acilan sekmenin index'i 1'dir
+        ve ikinci acilan pencere veya sekmede islem yapabilmek icin
+        driver.switchTo().window(ListAdi.get(1)) methodu kullaniriz
+        */
+
         driver.findElement(By.xpath("//*[text()='Click Here']")).click();
         List<String> windowList = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windowList.get(1));
