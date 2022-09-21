@@ -8,8 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public abstract class TestBaseBeforeAfter {
-    protected WebDriver driver;
+public class TestBaseBeforeAfter {
+    public WebDriver driver;
 
     @Before
     public void setUp() {

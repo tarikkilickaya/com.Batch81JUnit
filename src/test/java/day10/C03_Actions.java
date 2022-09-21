@@ -4,8 +4,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import utilities.TestBaseBeforeClassAfterClass;
 
-public class C03_Actions extends C02_BeforeAfterClass {
+public class C03_Actions extends TestBaseBeforeClassAfterClass {
     @Test
     public void test1() {
         // Amazon sayfasına gidelim
