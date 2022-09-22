@@ -55,12 +55,12 @@ public class C04_DropDownHerOkuApp {
         System.out.println("========================================");
         //Tüm dropdown değerleri(value) yazdırın
         List<WebElement> tumDdm = select.getOptions();
-        tumDdm.forEach(t-> System.out.println(t.getText()));
+        tumDdm.forEach(t -> System.out.println(t.getText()));
         //Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True , degilse False yazdırın.
         System.out.println("Drop Down boyutu : " + tumDdm.size());
         if (tumDdm.size() == 4) {
             System.out.println("True");
         } else System.out.println("False");
-        Assert.assertNotEquals(tumDdm.size() , 4);
+        Assert.assertNotEquals(tumDdm.size(), 4);
     }
 }

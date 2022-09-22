@@ -29,7 +29,7 @@ public class C02_DropDownHandleAmazon {
 
     @After
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 
 

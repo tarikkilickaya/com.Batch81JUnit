@@ -82,6 +82,6 @@ public class C02_Alerts {
         Thread.sleep(2000);
         String mesaj = driver.findElement(By.xpath("//*[@id='result']")).getText();
         String mesajdaArananKelime = "Tarık";
-        Assert.assertEquals(mesajdaArananKelime, mesajdaArananKelime);
+        Assert.assertEquals(mesaj, mesajdaArananKelime);
     }
 }
