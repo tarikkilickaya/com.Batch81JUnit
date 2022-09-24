@@ -9,4 +9,10 @@ public class sutunnotlar {
                 <tr> satirlari
                 <td> satirdaki cell numarasini verir(bunu sutun diye adlandirabiliriz ama kodlarda sutun yoktur)
      */
+
+
+    /*
+    //thead(Baslik)         //tr(Satir)     //th(Sutun)                   Baslik icin
+//tbody(Vucut- Ana)     //tr(Satir)      //td (Vucut - Ana Sutunu)     Body icin
+     */
 }
