@@ -15,8 +15,8 @@ public class C01_GMIBankLogin {
         // 1) https://www.gmibank.com/ adresinde gidiniz
         driver.get("https://www.gmibank.com/");
         // 2) Sign in butonuna tıklayınız
-        driver.findElement(By.xpath("//*[@class='svg-inline--fa fa-user fa-w-14 ']")).click();
-        driver.findElement(By.id("login-item")).click();
+        driver.findElement(By.xpath("//*[@data-icon='user']")).click();
+        driver.findElement(By.xpath("(//*[text()='Sign in'])[1]")).click();
         // 3) Username: Batch81 --- Password: Batch81+ bilgileri ile giriş yapınız
         driver.findElement(By.xpath("//*[@name='username']")).sendKeys("Batch81");
         driver.findElement(By.xpath("//*[@name='password']")).sendKeys("Batch81+");

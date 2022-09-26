@@ -45,9 +45,9 @@ public class C01_Cookies extends TestBaseBeforeClassAfterClass {
         //6-eklediginiz cookie’nin sayfaya eklendigini test edin
         Assert.assertTrue(tumCookie.contains(yeniCookie));
         //7-ismi skin olan cookie’yi silin ve silindigini test edin
-        Cookie isim = driver.manage().getCookieNamed("skin");
         driver.manage().deleteCookieNamed("skin");
-        Assert.assertFalse(tumCookie.contains(isim));
+        tumCookie = driver.manage().getCookies();
+        Assert.assertFalse(tumCookie.contains("skin"));
         //8-tum cookie’leri silin ve silindigini test edin
         driver.manage().deleteAllCookies();
         tumCookie = driver.manage().getCookies();
