@@ -20,7 +20,7 @@ public class TestBaseBeforeClassAfterClass {
 
     public Faker faker = new Faker();
 
-    public String tarih;
+    public static String tarih;
 
 
     @BeforeClass
@@ -31,7 +31,7 @@ public class TestBaseBeforeClassAfterClass {
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYMMddHHmmss");
-        String tarih = date.format(formatter);
+        tarih = date.format(formatter);
     }
 
     @AfterClass

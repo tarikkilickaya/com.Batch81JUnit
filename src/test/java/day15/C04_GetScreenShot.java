@@ -15,7 +15,7 @@ public class C04_GetScreenShot extends TestBaseBeforeClassAfterClass {
     @Test
     public void test1() throws IOException {
         // Amazon sayfasına gidip tüm sayfanın resmini alalım
-        driver.get("https://techproeducation.com");
+        driver.get("https://amazon.com");
 
         /*
         Bir web sayfasının resmini alabilmek için TakesScreenshot classından obje oluşturup
