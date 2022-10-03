@@ -29,7 +29,7 @@ public class C04_FileExist extends TestBaseBeforeClassAfterClass {
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 
         /*
-        Bir web sitesinden indirdiğimiz ya da windos içinde oluşturduğumuz dosyanın indiğini veya orada bulunduğunu
+        Bir web sitesinden indirdiğimiz ya da windows içinde oluşturduğumuz dosyanın indiğini veya orada bulunduğunu
         test edebilmek için o dosyanın üzerine shift tuşuna basılı tutarak sağ click yapıp dosyanın yolunu kopyalayıp
         String bir değişkene atarız ve dosyayı doğrulamak için Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
         methodunu kullanırız.

@@ -36,8 +36,11 @@ public class C01_Assertions {
         //Sign in butonuna basalim
         driver.findElement(By.xpath("//*[@title='Log in to your customer account']")).click();
         //Email kutusuna @isareti olmayan bir mail yazip enter’a bastigimizda “Invalid email address” uyarisi ciktigini test edelim
-        WebElement emailKutusu = driver.findElement(By.xpath("//*[@id='email_create']"));
-        emailKutusu.sendKeys("tarik.com" + Keys.ENTER);
-        Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Invalid email address.']")).isDisplayed());
+        WebElement email = driver.findElement(By.xpath("//*[@id='email_create']"));
+        email.sendKeys("tarikgmail.com", Keys.ENTER);
+        WebElement uyariYazisi = driver.findElement(By.xpath("//*[@id='create_account_error']"));
+
+        Assert.assertTrue(uyariYazisi.isDisplayed());
+
     }
 }

@@ -21,6 +21,9 @@ public class C02_FileExits_Upload extends TestBaseBeforeClassAfterClass {
          */
 
         //Yuklemek istediginiz dosyayi secelim.
+
+        // "C:\Users\Tarik\Desktop\a.png"
+
         String dosyaYolu = "C:\\Users\\Tarik\\Desktop\\text.txt";
         dosyaSecButonu.sendKeys(dosyaYolu);
         //Upload butonuna basalim.
